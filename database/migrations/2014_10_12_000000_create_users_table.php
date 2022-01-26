@@ -18,8 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name',100);//varchar 255
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();//para guardar fechas
-            $table->string('password');
-            $table->string('avatar');
+            $table->string('password');            
             $table->rememberToken();//un varchar 100, almacena un token, para marcar la sesion iniciada
             $table->timestamps();//columnas created_at y updated_at
         });
