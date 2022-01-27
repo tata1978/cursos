@@ -4,6 +4,13 @@
 
 @section('content')
     <h1>Bienvenidos a la Página de Cursos</h1>
-@endsection
 
-    
+    <ul>
+        @foreach ($cursos as $curso)
+            <li>{{ $curso->name }}</li>
+        @endforeach
+    </ul>
+
+    {{$cursos->links()}}
+
+@endsection
