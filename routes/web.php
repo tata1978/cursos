@@ -17,11 +17,15 @@ use App\Http\Controllers\CursoController;
 
 Route::get('/', HomeController::class);
 
-Route::get('cursos', [CursoController::class,'index']);
+Route::get('cursos', [CursoController::class,'index'])->name('cursos.index');
 
-route::get('cursos/create',[CursoController::class,'create']);
+route::get('cursos/create',[CursoController::class,'create'])->name('cursos.create');
 
-route::get('cursos/{curso}',[CursoController::class,'show']);
+route::post('cursos',[CursoController::class, 'store'])->name('cursos.store');
+
+route::get('cursos/{id}',[CursoController::class,'show'])->name('cursos.show');
+
+
 
 /* route::get('cursos/{cursos}/{categoria?}', function($curso, $categoria=null){
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,11 @@
     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     <title>@yield('title')</title>
 </head>
+
 <body>
-    
+
     @yield('content')
 
 </body>
+
 </html>
