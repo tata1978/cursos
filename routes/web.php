@@ -23,8 +23,11 @@ route::get('cursos/create',[CursoController::class,'create'])->name('cursos.crea
 
 route::post('cursos',[CursoController::class, 'store'])->name('cursos.store');
 
-route::get('cursos/{id}',[CursoController::class,'show'])->name('cursos.show');
+route::get('cursos/{curso}',[CursoController::class,'show'])->name('cursos.show');
 
+Route::get('cursos/{curso}/edit', [CursoController::class, 'edit'])->name('cursos.edit');
+
+Route::put('cursos/{curso}', [CursoController::class, 'update'])->name('cursos.update');
 
 
 /* route::get('cursos/{cursos}/{categoria?}', function($curso, $categoria=null){

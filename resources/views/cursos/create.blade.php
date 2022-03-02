@@ -4,20 +4,28 @@
 
 @section('content')
     <h1>En esta página podras crear nuevos cursos</h1>
-    <form action="{{route('cursos.store')}}">
+    <form action="{{ route('cursos.store') }}" method="POST">
+
+        @csrf
+
         <label>
-            Nombre:<br>
+            Nombre:
+            <br>
             <input type="text" name="name">
         </label>
         <br>
         <label>
-            Descripcion:<br>
+            Descripcion:
+            <br>
             <textarea name="description" rows="5"></textarea>
         </label>
         <br>
         <label>
-            Categoria:<br>
+            Categoria:
+            <br>
             <input type="text" name="categoria">
         </label>
+        <br>
+        <button type="submit">Enviar</button>
     </form>
 @endsection
