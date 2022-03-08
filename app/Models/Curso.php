@@ -9,7 +9,7 @@ class Curso extends Model
 {
     use HasFactory;
 
-    //protected $fillable = ['name','description','categoria'];//CAMPOS PERMITIDOS
+    //protected $fillable = ['name','description','categoria'];//CAMPOS PERMITIDOS, ignorar los protegidos
 
     protected $guarded=[];//CAMPOS PROTEGIDOS, DEJAMOS EN BLANDO SI NO LO TENEMOS
 }

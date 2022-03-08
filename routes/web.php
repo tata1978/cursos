@@ -15,9 +15,9 @@ use App\Http\Controllers\CursoController;
 |
 */
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class);//pagina principal
 
-Route::get('cursos', [CursoController::class,'index'])->name('cursos.index');
+/* Route::get('cursos', [CursoController::class,'index'])->name('cursos.index');
 
 route::get('cursos/create',[CursoController::class,'create'])->name('cursos.create');
 
@@ -29,14 +29,12 @@ Route::get('cursos/{curso}/edit', [CursoController::class, 'edit'])->name('curso
 
 Route::put('cursos/{curso}', [CursoController::class, 'update'])->name('cursos.update');
 
+route::delete('cursos/{curso}',[CursoController::class,'destroy'])->name('cursos.destoy'); */
 
-/* route::get('cursos/{cursos}/{categoria?}', function($curso, $categoria=null){
+//EN UNA SOLA LINEA DE CODIGO PODEMOS RESUMIR LAS 7 RUTAS ANTERIORES
 
-    if($categoria){
-        return "Bienvenidos al curso $curso, de la categoria $categoria";
-    }else{
-        return "Bienvenidos al curso de $curso";
-    }
-    
-}); */
+route::resource('cursos', CursoController::class);
+
+
+
 
