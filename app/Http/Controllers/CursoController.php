@@ -45,7 +45,7 @@ class CursoController extends Controller
         return redirect()->route('cursos.show', $curso);
     }
 
-    public function show(Curso $curso)
+    public function show(Curso $curso)// una instancia del modelo curso
     {
         //$curso = Curso::find($id);
 
@@ -87,6 +87,5 @@ class CursoController extends Controller
     public function destroy(Curso $curso){
         $curso->delete();
         return redirect()->route('cursos.index');
-
     }
 }

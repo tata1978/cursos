@@ -15,7 +15,7 @@ use App\Http\Controllers\CursoController;
 |
 */
 
-Route::get('/', HomeController::class);//pagina principal
+Route::get('/', HomeController::class)->name('home');//pagina principal
 
 /* Route::get('cursos', [CursoController::class,'index'])->name('cursos.index');
 
@@ -35,6 +35,4 @@ route::delete('cursos/{curso}',[CursoController::class,'destroy'])->name('cursos
 
 route::resource('cursos', CursoController::class);
 
-
-
-
+route::view('nosotros', 'nosotros')->name('nosotros');// route::view se usa para paginas estaticas
